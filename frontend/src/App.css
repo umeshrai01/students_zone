@@ -1,0 +1,76 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #f0f80b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.container {
+  width: 90%; /* Instead of a fixed width like 1200px */
+  margin: 0 auto; /* Centering */
+}
+
+/* For tablets and larger screens */
+@media (min-width: 768px) {
+  .navbar {
+    display: flex; /* Or another layout suitable for larger screens */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 767px) {
+  .navbar {
+    display: block;
+  }
+
+  .navbar-items {
+    display: none; /* Hide items by default */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show toggle button */
+  }
+}
+
+body {
+  font-size: 16px; /* Base size */
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Smaller size for smaller screens */
+  }
+}
