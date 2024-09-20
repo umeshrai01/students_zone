@@ -14,8 +14,15 @@ const userRoutes = require('./routes/user');
 
 const app = express();
 
-
+const corsOptions = {
+  origin: 'https://umeshrai01.github.io', // Replace with your frontend's URL
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Enable if you're dealing with cookies
+  optionsSuccessStatus: 204
+};
 app.use(cors(corsOptions));
+
+
 app.use(bodyParser.json());
 app.use(session({
   secret: process.env.SESSION_SECRET || 'secret',
@@ -37,5 +44,5 @@ app.use('/api/auth', authRoutes);
 app.use('/api/locality', localityRoutes);
 app.use('/api/user', userRoutes);
 
-const PORT = process.env.PORT || 5001; // Make sure this is set correctly
+const PORT = process.env.PORT || 10000; // Make sure this is set correctly
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
