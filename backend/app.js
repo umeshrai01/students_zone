@@ -11,6 +11,7 @@ const adminRoutes = require('./routes/admin');
 const authRoutes = require('./routes/auth');
 const localityRoutes = require('./routes/locality');
 const userRoutes = require('./routes/user');
+//const adminMiddleware = require('./middleware/authMiddleware');
 
 const app = express();
 

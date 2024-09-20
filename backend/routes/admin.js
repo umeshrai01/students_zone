@@ -2,11 +2,11 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const router = express.Router();
-const adminMiddleware = require('./authMiddleware');
+const adminMiddleware = require('../middleware/authMiddleware');
 
 
 
-app.use('/api/locality', adminMiddleware, localityRoutes);
+//app.use('/api/locality', adminMiddleware, localityRoutes);
 
 // Admin Signup Route
 router.post('/admin-signup', async (req, res) => {
