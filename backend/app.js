@@ -15,12 +15,12 @@ const userRoutes = require('./routes/user');
 const app = express();
 
 const corsOptions = {
-  origin: 'https://umeshrai01.github.io/login', // Update if your frontend URL changes
+  origin: 'https://umeshrai01.github.io', // Update if your frontend URL changes
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 };
 
-//app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(session({
   secret: process.env.SESSION_SECRET || 'secret',
