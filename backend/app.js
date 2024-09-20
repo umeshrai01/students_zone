@@ -18,7 +18,7 @@ const userRoutes = require('./routes/user');
 const app = express();
 
 const corsOptions = {
-  origin: 'https://umeshrai01.github.io/students_zone',
+  origin: 'https://umeshrai01.github.io',
   credentials: true,
 };
 
