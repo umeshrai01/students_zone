@@ -19,6 +19,10 @@ const app = express();
 
 const corsOptions = {
   origin: 'https://umeshrai01.github.io',
+<<<<<<< HEAD
+=======
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+>>>>>>> 751cc67 (Your commit message here)
   credentials: true,
 };
 
