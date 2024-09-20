@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://umeshrai01.github.io/students_zone",
+  "homepage": "https://umeshrai01.github.io",
   "dependencies": {
     "@clerk/clerk-react": "^5.9.0",
     "@react-oauth/google": "^0.12.1",
@@ -17,8 +17,7 @@
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
 
-    "web-vitals": "^2.1.4",
-    "proxy": "https://students-zone.onrender.com"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "predeploy": "npm run build",
