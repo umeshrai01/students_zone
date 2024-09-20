@@ -13,15 +13,16 @@ const localityRoutes = require('./routes/locality');
 const userRoutes = require('./routes/user');
 //const adminMiddleware = require('./middleware/authMiddleware');
 
+
+
+const app = express();
+
 const corsOptions = {
   origin: 'https://umeshrai01.github.io/students_zone',
   credentials: true,
 };
 
 app.use(cors(corsOptions));
-
-const app = express();
-
 
 app.use(cors());
 app.use(bodyParser.json());
