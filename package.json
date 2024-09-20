@@ -10,7 +10,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.6.2",
     "passport": "^0.7.0",
-    "proxy": "http://localhost:5001" 
+    "proxy": "https://students-zone.onrender.com" 
   }
 }
 

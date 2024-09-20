@@ -17,7 +17,7 @@ const AuthPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = isLogin ? 'http://localhost:5001/api/auth/login' : 'http://localhost:5001/api/auth/signup';
+    const url = isLogin ? 'https://students-zone.onrender.com/api/auth/login' : 'https://students-zone.onrender.com/api/auth/signup';
 
     try {
       const response = await axios.post(url, formData);
@@ -41,7 +41,7 @@ const AuthPage = () => {
 
   const handleForgotPassword = async () => {
     try {
-      const response = await axios.post('http://localhost:5001/api/auth/forgot-password', { email: forgotPasswordEmail });
+      const response = await axios.post('https://students-zone.onrender.com/api/auth/forgot-password', { email: forgotPasswordEmail });
       setForgotPasswordMessage(response.data.message);
     } catch (error) {
       setForgotPasswordMessage('Error sending reset link. Please try again.');

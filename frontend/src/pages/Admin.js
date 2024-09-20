@@ -28,7 +28,7 @@ function Admin() {
 
   const fetchLocalities = async (token) => {
     try {
-      const response = await axios.get('http://localhost:5001/api/locality', {
+      const response = await axios.get('https://students-zone.onrender.com/api/locality', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setLocalities(response.data);
@@ -48,7 +48,7 @@ function Admin() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5001/api/auth/admin/login', formData);
+      const response = await axios.post('https://students-zone.onrender.com/api/auth/admin/login', formData);
       localStorage.setItem('token', response.data.token);
       navigate('/admin');
       window.location.reload();
@@ -60,7 +60,7 @@ function Admin() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5001/api/auth/admin/signup', formData);
+      await axios.post('https://students-zone.onrender.com/api/auth/admin/signup', formData);
       alert('Signup successful!');
       setIsLogin(true);
     } catch (error) {
@@ -84,7 +84,7 @@ function Admin() {
   const handleDelete = async (id) => {
     const token = localStorage.getItem('token');
     try {
-      await axios.delete(`http://localhost:5001/api/locality/${id}`, {
+      await axios.delete(`https://students-zone.onrender.com/api/locality/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchLocalities(token);
@@ -98,7 +98,7 @@ function Admin() {
     const token = localStorage.getItem('token');
     try {
       if (editingLocality) {
-        await axios.put(`http://localhost:5001/api/locality/${editingLocality._id}`, localityFormData, {
+        await axios.put(`https://students-zone.onrender.com/api/locality/${editingLocality._id}`, localityFormData, {
           headers: { Authorization: `Bearer ${token}` },
         });
       }

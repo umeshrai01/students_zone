@@ -8,7 +8,7 @@ const Profile = () => {
     const fetchProfileData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5001/api/user/profile', {
+        const response = await axios.get('https://students-zone.onrender.com/api/user/profile', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setProfileData(response.data);

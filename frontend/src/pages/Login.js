@@ -11,7 +11,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5001/api/auth/login', { email, password });
+      const response = await axios.post('https://students-zone.onrender.com/api/auth/login', { email, password });
       localStorage.setItem('token', response.data.token);
 
       // Redirect to the localities page after login

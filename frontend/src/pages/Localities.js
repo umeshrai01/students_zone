@@ -15,12 +15,12 @@ function Localities() {
       const fetchServices = async () => {
         try {
           if (showMess) {
-            const response = await axios.get(`http://localhost:5001/api/locality/mess/${city}`, {
+            const response = await axios.get(`https://students-zone.onrender.com/api/locality/mess/${city}`, {
               headers: { Authorization: `Bearer ${token}` }
             });
             setMessServices(response.data);
           } else {
-            const response = await axios.get(`http://localhost:5001/api/locality/rooms/${city}`, {
+            const response = await axios.get(`https://students-zone.onrender.com/api/locality/rooms/${city}`, {
               headers: { Authorization: `Bearer ${token}` }
             });
             setRooms(response.data);

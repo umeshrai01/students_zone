@@ -19,7 +19,7 @@ function AddLocality() {
     }
 
     try {
-      const url = 'http://localhost:5001/api/locality';
+      const url = 'https://students-zone.onrender.com/api/locality';
       const response = await axios.post(url, locality, {
         headers: { Authorization: `Bearer ${token}` },
       });
