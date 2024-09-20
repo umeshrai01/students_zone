@@ -11,21 +11,16 @@ const adminRoutes = require('./routes/admin');
 const authRoutes = require('./routes/auth');
 const localityRoutes = require('./routes/locality');
 const userRoutes = require('./routes/user');
-//const adminMiddleware = require('./middleware/authMiddleware');
-
-
 
 const app = express();
 
 const corsOptions = {
-  origin: 'https://umeshrai01.github.io',
+  origin: 'https://umeshrai01.github.io/students_zone/', // Update if your frontend URL changes
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 };
 
 app.use(cors(corsOptions));
-
-app.use(cors());
 app.use(bodyParser.json());
 app.use(session({
   secret: process.env.SESSION_SECRET || 'secret',
@@ -47,5 +42,5 @@ app.use('/api/auth', authRoutes);
 app.use('/api/locality', localityRoutes);
 app.use('/api/user', userRoutes);
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5001; // Make sure this is set correctly
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
