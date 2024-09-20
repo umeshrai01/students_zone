@@ -19,7 +19,6 @@ const app = express();
 
 const corsOptions = {
   origin: 'https://umeshrai01.github.io',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 };
 
