@@ -14,7 +14,7 @@ const userRoutes = require('./routes/user');
 //const adminMiddleware = require('./middleware/authMiddleware');
 
 const corsOptions = {
-  origin: 'https://umeshrai01.github.io/students_zone'
+  origin: 'https://umeshrai01.github.io/students_zone',
   credentials: true,
 };
 
