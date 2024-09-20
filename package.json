@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "homepage": "https://umeshrai01.github.io",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
@@ -10,7 +11,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.6.2",
     "passport": "^0.7.0",
-    "proxy": "http://localhost:5001" 
+    "proxy": "https://students-zone.onrender.com" 
   }
 }
 
