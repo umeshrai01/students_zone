@@ -13,7 +13,9 @@ import Dashboard from './components/Dashboard';
 import Profile from './components/Profile';
 import Settings from './components/Settings';
 import AuthPage from './pages/AuthPage';
-import AddLocality from './pages/AddLocality';  // Import AddLocality component
+import AddLocality from './pages/AddLocality';  
+import './App.css';
+import './pages/Home.css';
 
 function App() {
   return (
@@ -32,7 +34,8 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/auth" element={<AuthPage />} />
-        <Route path="/add-locality" element={<AddLocality />} /> {/* New Route */}
+        <Route path="/add-locality" element={<AddLocality />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

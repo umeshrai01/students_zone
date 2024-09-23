@@ -1,0 +1,97 @@
+/* General styling for the homepage */
+.homepage {
+    background-image: url('../assets/image.jpg'); /* Use the landscape image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.homepage-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add text shadow */
+}
+
+.homepage-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.custom-btn {
+    padding: 0.75rem 2rem;
+    font-size: 1.25rem;
+    background-color: #2d4258;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #0072ed;
+    box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.7); /* Glow effect */
+}
+/* Button styling for Create an Account, Forgot Password, and Logout */
+.login-extra-btn {
+    padding: 0.5rem 1rem;
+    background-color: #ff8c00; /* Change background color */
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+
+.login-extra-btn:hover {
+    background-color: #ff6700; /* Darker hover effect */
+    color: white;
+}
+
+/* Styling for the logout button */
+.logout-btn {
+    padding: 0.5rem 1rem;
+    background-color: #f44336; /* Red for logout */
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .homepage-title {
+        font-size: 2.2rem;
+    }
+
+    .homepage-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .custom-btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    .login-extra-btn, .logout-btn {
+        width: 100%; /* Full width buttons on small screens */
+        text-align: center;
+    }
+}

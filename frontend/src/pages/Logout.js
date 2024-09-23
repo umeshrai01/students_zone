@@ -5,14 +5,17 @@ function Logout() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Clear token from local storage
+    // Clear the token from local storage
     localStorage.removeItem('token');
-
-    // Redirect to home page or login
-    navigate('/');
+    // Redirect to the login page
+    navigate('/login');
   }, [navigate]);
 
-  return <div>Logging out...</div>;
+  return (
+    <div className="container mt-5">
+      <h2>Logging Out...</h2>
+    </div>
+  );
 }
 
 export default Logout;

@@ -12,7 +12,7 @@ function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://students-zone.onrender.com/api/auth/signup', formData)
+    axios.post('http://localhost:5001/api/auth/signup', formData)
       .then(response => {
         alert('Signup successful!');
         navigate('/login');
